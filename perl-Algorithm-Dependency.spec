@@ -19,7 +19,6 @@ BuildRequires:	perl(Config::Tiny) >= 2.0
 BuildRequires:	perl(Test::ClassAPI) >= 0.6
 BuildRequires:  perl(Params::Util)
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 Algorithm::Dependency is a framework for creating simple read-only
