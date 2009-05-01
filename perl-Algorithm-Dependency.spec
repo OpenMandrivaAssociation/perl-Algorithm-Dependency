@@ -1,6 +1,6 @@
 %define module	Algorithm-Dependency
 %define name	perl-%{module}
-%define version 1.108
+%define version 1.110
 %define release %mkrel 1
 
 Name:		%{name}
