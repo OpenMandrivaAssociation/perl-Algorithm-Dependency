@@ -1,13 +1,13 @@
 %define module	Algorithm-Dependency
 %define name	perl-%{module}
 %define version 1.110
-%define release %mkrel 1
+%define release %mkrel 2
 
 Name:		%{name}
 Version:	%{version}
 Release:	%{release}
 Summary:	Algorithmic framework for implementing dependency tree
-License:	GPL or Artistic
+License:	GPLv1+ or Artistic
 Group:		Development/Perl
 URL:		http://search.cpan.org/dist/%{module}
 Source:		http://www.cpan.org/modules/by-module/Algorithm/%{module}-%{version}.tar.bz2
@@ -27,7 +27,7 @@ dependency hierachies, where you have a set of items that rely on other
 items in the set, and require actions on them as well.
 
 Despite the most visible of these being software installation systems
-like the CPAN installer, or debian apt-get, they are usefu
+like the CPAN installer, or debian apt-get, they are useful in others
 situations. This module intentionally uses implementation-neutral words,
 to avoid confusion.
 
