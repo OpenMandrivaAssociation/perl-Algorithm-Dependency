@@ -1,16 +1,16 @@
-%define module	Algorithm-Dependency
-%define name	perl-%{module}
-%define version 1.110
-%define release %mkrel 2
+%define upstream_name	 Algorithm-Dependency
+%define upstream_version 1.110
 
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 2
+
 Summary:	Algorithmic framework for implementing dependency tree
 License:	GPLv1+ or Artistic
 Group:		Development/Perl
-URL:		http://search.cpan.org/dist/%{module}
-Source:		http://www.cpan.org/modules/by-module/Algorithm/%{module}-%{version}.tar.bz2
+Url:		http://search.cpan.org/dist/%{upstream_name}
+Source0:	http://www.cpan.org/modules/by-module/Algorithm/%{upstream_name}-%{upstream_version}.tar.bz2
+
 %if %{mdkversion} < 1010
 Buildrequires:	perl-devel
 %endif
@@ -18,8 +18,9 @@ BuildRequires:	perl(Class::Inspector) >= 1.06
 BuildRequires:	perl(Config::Tiny) >= 2.0
 BuildRequires:	perl(Test::ClassAPI) >= 0.6
 BuildRequires:  perl(Params::Util)
+
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 Algorithm::Dependency is a framework for creating simple read-only
@@ -32,7 +33,7 @@ situations. This module intentionally uses implementation-neutral words,
 to avoid confusion.
 
 %prep
-%setup -q -n %{module}-%{version} 
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -53,4 +54,3 @@ rm -rf %{buildroot}
 %doc Changes README
 %{perl_vendorlib}/Algorithm
 %{_mandir}/*/*
-
