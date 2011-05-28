@@ -3,7 +3,7 @@
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 2
+Release:    %mkrel 3
 
 Summary:	Algorithmic framework for implementing dependency tree
 License:	GPLv1+ or Artistic
