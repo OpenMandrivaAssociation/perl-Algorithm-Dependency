@@ -1,15 +1,15 @@
 %define upstream_name	 Algorithm-Dependency
-%define upstream_version 1.110
+%define upstream_version 1.112
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	6
+Version:	%{upstream_version}
+Release:	1
 
 Summary:	Algorithmic framework for implementing dependency tree
 License:	GPLv1+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/Algorithm/%{upstream_name}-%{upstream_version}.tar.bz2
+Url:		https://github.com/karenetheridge/Algorithm-Dependency
+Source0:	https://cpan.metacpan.org/authors/id/E/ET/ETHER/Algorithm-Dependency-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
