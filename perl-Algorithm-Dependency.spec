@@ -1,15 +1,13 @@
 %define upstream_name	 Algorithm-Dependency
-%define upstream_version 1.112
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	1
+Version:	1.112
+Release:	2
 
 Summary:	Algorithmic framework for implementing dependency tree
 License:	GPLv1+ or Artistic
 Group:		Development/Perl
 Url:		https://github.com/karenetheridge/Algorithm-Dependency
-Source0:	https://cpan.metacpan.org/authors/id/E/ET/ETHER/Algorithm-Dependency-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/E/ET/ETHER/Algorithm-Dependency-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -31,7 +29,7 @@ situations. This module intentionally uses implementation-neutral words,
 to avoid confusion.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 %__perl Makefile.PL INSTALLDIRS=vendor
@@ -56,9 +54,7 @@ make test
 
 * Wed Feb 10 2010 JÃ©rÃ´me Quelin <jquelin@mandriva.org> 1.110.0-2mdv2011.0
 + Revision: 503911
-- rebuild using %%perl_convert_version
-
-* Fri Dec 25 2009 Michael Scherer <misc@mandriva.org> 1.110-2mdv2010.1
+- rebuild using %1.112 Fri Dec 25 2009 Michael Scherer <misc@mandriva.org> 1.110-2mdv2010.1
 + Revision: 482286
 - fix License
 - fix description
